@@ -55,58 +55,114 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-black scroll-smooth">
-      {/* Header Section */}
-      <div className="grid grid-cols-3 justify-center p-0.5 items-center" id="home">
-        <div>
-          <img
-            src="logo.jpeg"
-            className="h-12 w-12 ml-10 mt-[-15px]"
-            style={{ borderRadius: "50%" }}
-          />
-        </div>
-        <div className="mt-[-5px]">
-          <FloatingDockDemo />
-        </div>
-        <div className=" ml-[80px] mt-[20px]">
-          <AnimatedTooltipPreview />
-        </div>
-      </div>
-
-      <SparklesPreview />
-
-      {/* Projects Section */}
-      <div id="projects" className="grid grid-cols-3 gap-10 mt-[-80px] p-12">
-        {data.map((item, key) => (
-          <div key={key}>
-            <ThreeDCardDemo item={item} />
+    <div className="bg-black scroll-smooth min-h-screen">
+      {/* Header Section - Responsive */}
+      <header 
+        id="home" 
+        className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-4">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <Image
+                src="/logo.jpeg"
+                alt="Logo"
+                width={48}
+                height={48}
+                className="rounded-full w-10 h-10 sm:w-12 sm:h-12"
+              />
+            </div>
+            
+            {/* Navigation - Hidden on mobile, use hamburger menu if needed */}
+            <div className="hidden md:flex flex-1 justify-center">
+              <FloatingDockDemo />
+            </div>
+            
+            {/* Team Members - Hidden on small screens */}
+            <div className="hidden lg:block">
+              <AnimatedTooltipPreview />
+            </div>
+            
+            {/* Mobile Menu Button - Add if needed */}
+            <div className="md:hidden">
+              {/* Add mobile menu button here if needed */}
+            </div>
           </div>
-        ))}
-      </div>
+        </div>
+      </header>
 
-      {/* Timeline */}
-      <div className=" mt-[-200px]">
- <TimelineDemo />
+      {/* Hero Section */}
+      <section className="relative">
+        <SparklesPreview />
+      </section>
 
-      </div>
-     
+      {/* Projects Section - Responsive Grid */}
+      <section 
+        id="projects" 
+        className="py-12 sm:py-16 lg:py-20"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+            {data.map((item, key) => (
+              <div key={key} className="flex justify-center">
+                <ThreeDCardDemo item={item} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <TimelineDemo />
+        </div>
+      </section>
+
       {/* Typewriter Section */}
-      <div id="typewriter" className=" mt-40">
-        <TypewriterEffectDemo />
-          <LayoutGridDemo />
-      </div>
-<InfiniteMovingCardsDemo/>
-      {/* Services Section */}
-        <GlobeDemo />
-      <div id="tabs">
-        <TabsDemo />
-      </div>
+      <section 
+        id="typewriter" 
+        className="py-12 sm:py-16 lg:py-20"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16 lg:space-y-20">
+          <div className="text-center">
+            <TypewriterEffectDemo />
+          </div>
+          <div>
+            <LayoutGridDemo />
+          </div>
+        </div>
+      </section>
 
-      
-    <div id="footer">
-   <Footer />
-    </div>
-   
+      {/* Infinite Moving Cards */}
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <InfiniteMovingCardsDemo />
+        </div>
+      </section>
+
+      {/* Globe Section */}
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <GlobeDemo />
+        </div>
+      </section>
+
+      {/* Services/Tabs Section */}
+      <section 
+        id="tabs" 
+        className="py-12 sm:py-16 lg:py-20"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <TabsDemo />
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer id="footer" className="mt-12 sm:mt-16 lg:mt-20">
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 body{
-    background: white;
+    background: black;
 
 }
 @theme inline {
