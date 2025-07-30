@@ -13,7 +13,14 @@ import Image from "next/image";
 import Footer from "@/parts/Footer";
 import { GlobeDemo } from "@/parts/GlobeDemo";
 import { TabsDemo } from "@/parts/Tabsdemo";
-
+import { FocusCardsDemo } from "@/parts/FocuscardDemo";
+import { FlipWordsDemo } from "@/parts/FlipWordDemo";
+import { AnimatedTestimonialsDemo } from "@/parts/OurClient";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 export default function Home() {
   const data = [
     {
@@ -139,7 +146,24 @@ export default function Home() {
           <TabsDemo />
         </div>
       </section>
+      <section id="tabs" className="py-12 sm:py-16 lg:py-20  bg-white rounded-lg  ">
+        <div className="flex flex-col  mx-auto px-4 sm:px-6 lg:px-8">
+          <FlipWordsDemo />
+       
 
+  <FocusCardsDemo/>
+
+
+        
+        </div>
+      </section>
+      {/* Our Client */}
+      <section id="tabs" className="py-12 sm:py-16 lg:py-20 ">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 className=" text-white text-center text-6xl font-bold">Our Client</h1>
+        <AnimatedTestimonialsDemo/>
+        </div>
+      </section>
       {/* Footer */}
       <footer id="footer" className="mt-12 sm:mt-16 lg:mt-20">
         <Footer />
