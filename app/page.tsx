@@ -56,14 +56,13 @@ export default function Home() {
 
   return (
     <div className="bg-black scroll-smooth min-h-screen">
-      {/* Header Section - Responsive */}
-      <header 
-        id="home" 
+      {/* Header Section */}
+      <header
+        id="home"
         className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
-            {/* Logo */}
             <div className="flex-shrink-0">
               <Image
                 src="/logo.jpeg"
@@ -73,20 +72,11 @@ export default function Home() {
                 className="rounded-full w-10 h-10 sm:w-12 sm:h-12"
               />
             </div>
-            
-            {/* Navigation - Hidden on mobile, use hamburger menu if needed */}
-            <div className="hidden md:flex flex-1 justify-center">
+            <div className="flex flex-1 justify-center">
               <FloatingDockDemo />
             </div>
-            
-            {/* Team Members - Hidden on small screens */}
-            <div className="hidden lg:block">
+            <div className="hidden sm:block">
               <AnimatedTooltipPreview />
-            </div>
-            
-            {/* Mobile Menu Button - Add if needed */}
-            <div className="md:hidden">
-              {/* Add mobile menu button here if needed */}
             </div>
           </div>
         </div>
@@ -97,15 +87,12 @@ export default function Home() {
         <SparklesPreview />
       </section>
 
-      {/* Projects Section - Responsive Grid */}
-      <section 
-        id="projects" 
-        className="py-12 sm:py-16 lg:py-20"
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+      {/* Projects Section */}
+      <section id="projects" className="py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-6 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 sm:gap-8 lg:gap-y-0 ">
             {data.map((item, key) => (
-              <div key={key} className="flex justify-center">
+              <div key={key} className="flex justify-center  sm:mb-[-60px]">
                 <ThreeDCardDemo item={item} />
               </div>
             ))}
@@ -114,17 +101,14 @@ export default function Home() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      <section className="py-12 sm:py-16 lg:py-20 mt-0 sm:mt-[-170px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <TimelineDemo />
         </div>
       </section>
 
       {/* Typewriter Section */}
-      <section 
-        id="typewriter" 
-        className="py-12 sm:py-16 lg:py-20"
-      >
+      <section id="typewriter" className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16 lg:space-y-20">
           <div className="text-center">
             <TypewriterEffectDemo />
@@ -135,25 +119,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Infinite Moving Cards */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      {/* Infinite Moving Cards Section */}
+      <section className="py-12 sm:py-16 lg:py-20 mt-0 sm:mt-[-250px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <InfiniteMovingCardsDemo />
         </div>
       </section>
 
       {/* Globe Section */}
-      <section className="py-12 sm:py-16 lg:py-20">
+      <section className="py-12 sm:py-16 lg:py-20 mt-0 sm:mt-[-240px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <GlobeDemo />
         </div>
       </section>
 
-      {/* Services/Tabs Section */}
-      <section 
-        id="tabs" 
-        className="py-12 sm:py-16 lg:py-20"
-      >
+      {/* Tabs Section */}
+      <section id="tabs" className="py-12 sm:py-16 lg:py-20 mt-[-230px]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <TabsDemo />
         </div>

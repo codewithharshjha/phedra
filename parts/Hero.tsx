@@ -6,7 +6,7 @@ import { FloatingDockDemo } from "./Floatingheader";
 export function SparklesPreview() {
   return (
     <div className="h-[40rem] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md ">
-      <div className="w-full absolute inset-0 h-screen">
+      <div className="w-full absolute inset-0 h-[400px] sm:h-screen ">
        
         <SparklesCore
           id="tsparticlesfullpage"
@@ -18,10 +18,12 @@ export function SparklesPreview() {
           particleColor="#FFFFFF"
         />
       </div>
-      <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20">
-        Fedra Makes Faster Scalable <br />
-        Optimize Product 
-      </h1>
+      <h1 className="relative z-20 text-3xl md:text-7xl lg:text-6xl font-bold ml-[50px] sm:text-center text-white mt-[-180px] sm:mt-0">
+  Fedra Makes Faster Scalable <br />
+  Optimize Product 
+</h1>
+
+
     </div>
   );
 }
