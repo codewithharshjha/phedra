@@ -16,11 +16,9 @@ import { TabsDemo } from "@/parts/Tabsdemo";
 import { FocusCardsDemo } from "@/parts/FocuscardDemo";
 import { FlipWordsDemo } from "@/parts/FlipWordDemo";
 import { AnimatedTestimonialsDemo } from "@/parts/OurClient";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 export default function Home() {
   const data = [
     {
@@ -60,7 +58,13 @@ export default function Home() {
       url: "https://www.virtueaze.com/",
     },
   ];
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  }, []);
+  
   return (
     <div className="bg-black scroll-smooth min-h-screen">
       {/* Header Section */}
@@ -95,12 +99,12 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-12 sm:py-16 lg:py-20">
+      <section id="projects" className="py-12 sm:py-16 lg:py-20 sm:mt-[80px] mt-[-200px]">
         <div className="container mx-auto px-6 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 sm:gap-8 lg:gap-y-0 ">
+          <div className="grid grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-x-24 lg:gap-y-0 ">
             {data.map((item, key) => (
-              <div key={key} className="flex justify-center  sm:mb-[-60px]">
-                <ThreeDCardDemo item={item} />
+              <div key={key} className="flex justify-center    mt-[200px] sm:mt-[200px] "data-aos="fade-up">
+                <ThreeDCardDemo item={item}  />
               </div>
             ))}
           </div>
@@ -109,49 +113,54 @@ export default function Home() {
 
       {/* Timeline Section */}
       <section className="py-12 sm:py-16 lg:py-20 mt-0 sm:mt-[-170px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <TimelineDemo />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 "data-aos="zoom-in">
+          <TimelineDemo  />
         </div>
       </section>
 
       {/* Typewriter Section */}
       <section id="typewriter" className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16 lg:space-y-20">
-          <div className="text-center">
+          <div className="text-center"data-aos="fade-up">
             <TypewriterEffectDemo />
           </div>
-          <div>
+          <div data-aos="fade-up">
             <LayoutGridDemo />
           </div>
         </div>
       </section>
 
       {/* Infinite Moving Cards Section */}
-      <section className="py-12 sm:py-16 lg:py-20 mt-0 sm:mt-[-250px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20  mt-[-190px] sm:mt-[-250px]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"data-aos="fade-up">
           <InfiniteMovingCardsDemo />
         </div>
       </section>
 
       {/* Globe Section */}
-      <section className="py-12 sm:py-16 lg:py-20 mt-0 sm:mt-[-240px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 mt-[-180px] sm:mt-[-240px]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 " data-aos="fade-up">
           <GlobeDemo />
         </div>
       </section>
 
       {/* Tabs Section */}
-      <section id="tabs" className="py-12 sm:py-16 lg:py-20 mt-[-230px]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="tabs" className="py-12 sm:py-16 lg:py-20 mt-[-390px] sm:mt-[-230px]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
           <TabsDemo />
         </div>
       </section>
-      <section id="tabs" className="py-12 sm:py-16 lg:py-20  bg-white rounded-lg  ">
-        <div className="flex flex-col  mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="tabs" className="py-12 sm:p-16 lg:py-20  bg-white rounded-lg  ">
+        <div className="flex flex-col  mx-auto py-4 px-2 sm:px-6 lg:px-8 " data-aos="fade-up">
+          <div className="">
           <FlipWordsDemo />
+          </div>
+          
        
-
-  <FocusCardsDemo/>
+<div className=" mt-[50px]">
+<FocusCardsDemo/>
+</div>
+ 
 
 
         

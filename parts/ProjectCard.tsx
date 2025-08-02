@@ -15,7 +15,7 @@ type Props = {
 
 export function ThreeDCardDemo({ item }: Props) {
   return (
-    <CardContainer className="inter-var w-[300px] sm:w-[400px] sm:h-[400px] mb-[90px]">
+    <CardContainer className="inter-var w-[300px] sm:w-[400px] sm:h-[400px] sm:mt-[-250px] mt-[-300px]">
       <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
         <CardItem
           translateZ="50"

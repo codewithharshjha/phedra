@@ -52,8 +52,8 @@ export function TabsDemo() {
 
 const TabContent = ({ title, image }: { title: string; image: string }) => {
   return (
-    <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900 mt-[-60px]">
-      <p>{title}</p>
+    <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900 mt-[-50px]">
+      <p className=" text-center mt-[-15px] ">{title}</p>
       <DummyContent image={image} />
     </div>
   );
@@ -64,9 +64,8 @@ const DummyContent = ({ image }: { image: string }) => {
     <img
       src={image}
       alt="tab image"
-      width="1000"
-      height="1000"
-      className="object-cover object-left-top h-[60%] md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-4xl mx-auto block " 
+    
+      className="object-cover object-left-top  h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-4xl mx-auto block  " 
     />
   );
 };

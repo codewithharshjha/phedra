@@ -18,7 +18,7 @@ export function SparklesPreview() {
           particleColor="#FFFFFF"
         />
       </div>
-      <h1 className="relative z-20 text-3xl md:text-7xl lg:text-6xl font-bold ml-[50px] sm:text-center text-white mt-[-180px] sm:mt-0">
+      <h1 className="relative z-20 text-3xl md:text-7xl lg:text-6xl font-bold ml-[80px]  sm:ml-[50px] sm:text-center text-white mt-[-180px] sm:mt-0">
   Fedra Makes Faster Scalable <br />
   Optimize Product 
 </h1>
