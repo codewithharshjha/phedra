@@ -6,7 +6,7 @@ export function FlipWordsDemo() {
 
   return (
     <div className="h-[15rem] flex justify-center items-center px-4">
-      <div className="text-6xl mx-auto font-bold  text-blue-600 dark:text-blue-400">
+      <div className="sm:text-6xl text-3xl mx-auto font-bold  text-blue-600 dark:text-blue-400">
         Build
         <FlipWords words={words} /> <br />
         websites with Phaedra Plus

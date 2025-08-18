@@ -70,7 +70,7 @@ export default function Home() {
       {/* Header Section */}
       <header
         id="home"
-        className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800"
+        className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm border-b  "
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between py-4">
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-12 sm:py-16 lg:py-20 sm:mt-[80px] mt-[-200px]">
+      <section id="projects" className="py-12 sm:py-16 lg:py-20 sm:mt-[5px] mt-[-200px]">
         <div className="container mx-auto px-6 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1  md:grid-cols-2 xl:grid-cols-3 gap-x-24 lg:gap-y-0 ">
             {data.map((item, key) => (
@@ -121,7 +121,7 @@ export default function Home() {
       {/* Typewriter Section */}
       <section id="typewriter" className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16 lg:space-y-20">
-          <div className="text-center"data-aos="fade-up">
+          <div className="text-center "data-aos="fade-up">
             <TypewriterEffectDemo />
           </div>
           <div data-aos="fade-up">
@@ -150,14 +150,14 @@ export default function Home() {
           <TabsDemo />
         </div>
       </section>
-      <section id="tabs" className="py-12 sm:p-16 lg:py-20  bg-white rounded-lg  ">
+      <section id="tabs" className="p-8 sm:p-16 lg:py-20   rounded-lg  ">
         <div className="flex flex-col  mx-auto py-4 px-2 sm:px-6 lg:px-8 " data-aos="fade-up">
-          <div className="">
+          <div className="  mt-[-80px]">
           <FlipWordsDemo />
           </div>
           
        
-<div className=" mt-[50px]">
+<div className=" mt-[10px]">
 <FocusCardsDemo/>
 </div>
  
@@ -169,7 +169,7 @@ export default function Home() {
       {/* Our Client */}
       <section id="tabs" className="py-12 sm:py-16 lg:py-20 ">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className=" text-white text-center text-6xl font-bold">Our Client</h1>
+      <h1 className=" text-white  text-6xl font-bold">Built by Professionals, for Professionals</h1>
         <AnimatedTestimonialsDemo/>
         </div>
       </section>
